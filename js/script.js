@@ -12,8 +12,8 @@ var tariffa = 0.21;
 var scontoUnder = 20;
 var scontoOver = 40;
 var nomeCognome = prompt('Per favore inserisci nome e cognome separati da uno spazio');
-var etaAnagrafica = prompt('Quanti anni hai?');
-var kmTragitto = prompt('Quanti km vuoi percorrere?')
+var etaAnagrafica = parseInt(prompt('Quanti anni hai?'));
+var kmTragitto = parseInt(prompt('Quanti km vuoi percorrere?'));
 var prezzoBiglietto = tariffa * kmTragitto;
 var prezzoScontato;
 
@@ -25,7 +25,8 @@ if (etaAnagrafica <= 17) {
     document.getElementById('prezzo-scontato').innerHTML = ' ' + prezzoScontato;
 } else {
     prezzoScontato = prezzoBiglietto;
-    document.getElementById('prezzo-scontato').innerHTML = ' ' + "Non hai diritto a nessuno sconto" + prezzoScontato;
+    //document.getElementById('prezzo-scontato').innerHTML = ' ' + 'Nessuno sconto' + prezzoScontato;
+    document.getElementById('hidden-discount').style = 'display:none;';
 }
 
 var oraAttuale = new Date();
@@ -35,4 +36,3 @@ document.getElementById('nome-cognome').innerHTML = ' ' + nomeCognome;
 document.getElementById('eta-anagrafica').innerHTML = ' ' + etaAnagrafica;
 document.getElementById('km-tragitto').innerHTML = ' ' + kmTragitto;
 document.getElementById('prezzo-biglietto').innerHTML = ' ' + prezzoBiglietto;
-document.getElementById('prezzo-scontato').innerHTML = ' ' + prezzoScontato;

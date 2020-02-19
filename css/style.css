@@ -48,6 +48,7 @@ body {
     width: 100vw;
     display: flex;
     align-content: space-between;
+    overflow-y: scroll;
 }
 
 .main-ora {
@@ -132,6 +133,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#nome-cognome {
+    text-transform: capitalize;
 }
 
 .tabella {
