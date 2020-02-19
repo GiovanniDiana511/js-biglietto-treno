@@ -21,12 +21,15 @@ if (etaAnagrafica <= 17) {
     prezzoScontato = prezzoBiglietto - (prezzoBiglietto * scontoUnder) / 100;
     document.getElementById('prezzo-scontato').innerHTML = ' ' + prezzoScontato;
 } else if (etaAnagrafica >= 66) {
-    prezzoScontato = prezzoBiglietto (prezzoBiglietto * scontoOver) / 100;
+    prezzoScontato = prezzoBiglietto - (prezzoBiglietto * scontoOver) / 100;
     document.getElementById('prezzo-scontato').innerHTML = ' ' + prezzoScontato;
 } else {
     prezzoScontato = prezzoBiglietto;
     document.getElementById('prezzo-scontato').innerHTML = ' ' + "Non hai diritto a nessuno sconto" + prezzoScontato;
 }
+
+var oraAttuale = new Date();
+document.getElementById('ora-attuale').innerHTML = oraAttuale.getHours() + '.' + oraAttuale.getMinutes();
 
 document.getElementById('nome-cognome').innerHTML = ' ' + nomeCognome;
 document.getElementById('eta-anagrafica').innerHTML = ' ' + etaAnagrafica;
